@@ -8,8 +8,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      
-        <AlbumList />
+      <AlbumList />
       
     </div>
   );
