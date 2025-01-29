@@ -1,0 +1,275 @@
+
+
+/* styles.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: left; /* Horizontally center elements */
+  align-items: flex-start; /* Align elements at the top */
+  min-height: 100vh; /* Ensure the page takes up the full viewport height */
+  background-color: #000000; /* Optional: Background color */
+  padding-top: 2rem; /* Add space at the top */
+  background: url('./assets/bg.jpg');
+  background-repeat: no-repeat ;
+  background-size: cover;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+  /* Navbar styles */
+  .navbar {
+    background-color: #2196f3;
+    color: white;
+    padding: 20px;
+    width: 1500px;
+    height: 150px;
+  }
+  
+  .navbar h1 {
+    margin: 0;
+    font-size: 100px;
+  }
+  
+  /* Container styles */
+  .container {
+    width: 3000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Album Form styles */
+  .album-form {
+    margin: 30px 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .album-input {
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 70px;
+    flex: 1;
+    width: 300px;
+    height: 100px;
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    transition: background-color 0.2s;
+  }
+  
+  .btn-primary {
+    background-color: #2196f3;
+    color: white;
+    font-size: 70px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #1976d2;
+  }
+
+  .btn-secondary {
+    background-color: #2196f3;
+    color: white;
+    font-size: 50px;
+  }
+
+  .btn-secondary:hover {
+    background-color: #1976d2;
+  }
+  
+  .btn-danger {
+    background-color: #f44336;
+    color: white;
+    width: 350px;
+    font-size: 50px;
+  }
+  
+  .btn-danger:hover {
+    background-color: #d32f2f;
+  }
+  
+  .btn-success {
+    background-color: #4caf50;
+    width: 300px;
+    font-size: 50px;
+    color: white;
+  }
+  
+  .btn-success:hover {
+    background-color: #388e3c;
+  }
+  
+  /* Album Grid */
+  .album-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(700px, 1fr));
+    gap: 300px 300px;
+    margin-bottom: 30px;
+  }
+  
+  .album-card {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+    min-width:600px;
+    min-height: fit-content;
+    position:relative;
+  }
+  
+  .album-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .album-card-title {
+    color:brown;
+    margin: 0;
+    font-size: 50px;
+  }
+  
+  .album-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  /* Album Preview */
+  .album-preview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+    height: 250px;
+  }
+  
+  .album-preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .album-preview-more {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 18px;
+  }
+  
+  /* Selected Album */
+  .selected-album {
+    margin-top: 30px;
+  }
+  
+  .selected-album h2 {
+    font-size: 32px;
+    margin: 20px 0;
+  }
+  
+  /* Photo Grid */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .photo-item {
+    position: relative;
+    aspect-ratio: 1;
+    cursor: move;
+  }
+  
+  .photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+  
+  .photo-item:hover img {
+    transform: scale(1.02);
+  }
+  
+  .photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    border-radius: 8px;
+  }
+  
+  .photo-item:hover .photo-overlay {
+    opacity: 1;
+  }
+  
+  .photo-select {
+    padding: 12px;
+    border-radius: 4px;
+    border: none;
+    background-color: white;
+    font-size: 30px;
+    min-width: 150px;
+    color:#f44336;
+  }
+  
+  .back-button {
+    color: #2196f3;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 50px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .back-button:hover {
+    color: #1976d2;
+  }
+  
+  /* File input styling */
+  .file-input {
+    display: none;
+  }
+  
+  .file-label {
+    display: inline-block;
+    min-width: 120px;
+    text-align: center;
+  }
+  
+  /* Dragging styles */
+  .album-card {
+    width: 800px;
+    height: 250px;
+    border: 2px solid #ccc;
+    transition: border-color 0.2s;
+  }
+  
+  .album-card:hover {
+    border-color: #2196f3;
+  }
