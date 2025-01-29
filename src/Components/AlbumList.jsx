@@ -1,4 +1,3 @@
-// AlbumList.js
 import React, { useState } from 'react';
 import Album from './Album';
 

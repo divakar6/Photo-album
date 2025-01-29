@@ -7,7 +7,6 @@ const Album = ({ album, onDeletePhoto, onMovePhoto, otherAlbums }) => {
       <h2 className="album-card-title">{album.name}</h2>
       <div className="photo-grid">
         {album.photos.map((photo, index) => {
-          // Get the correct URL for display
           const photoUrl = typeof photo === 'object' && photo.url ? photo.url : photo;
           return (
             <div key={index} className="photo-item">
